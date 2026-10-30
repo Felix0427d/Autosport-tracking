@@ -202,26 +202,6 @@ thermique, et mise en place des protections adaptées.
 - Tests unitaires, tests d'intégration, journalisation et analyse des
   défaillances.
 
-## Plan de développement proposé
-
-| Phase | Travaux et critères de validation | Durée indicative |
-|-------|-----------------------------------|------------------|
-| **1. Châssis et socle de vol** | Conception CAO des pièces, impression 3D, assemblage du drone, configuration du contrôleur de vol, tests au sol puis vols manuels encadrés à la manette. | 4–6 semaines |
-| **2. Embarqué** | Carte STM32, FreeRTOS, lecture de capteurs, télémétrie (batterie, états) et exécution des commandes reçues. | 4–6 semaines |
-| **3. Liaison radio** | Transport commandes / télémétrie / vidéo, mesures de portée, latence et pertes de paquets, sécurisation des fonctions de commande. | 2–4 semaines |
-| **4. Station intelligente** | Interface cartographique sur PC, encodage des coordonnées, algorithme interne de traduction en commandes, supervision vidéo + état du drone. | 4–8 semaines |
-| **5. Vision** | Réception vidéo au sol, détection de marqueur, estimation de pose et essais sur station fixe avant tout atterrissage autonome. | 4–8 semaines |
-| **6. Recharge** | Prototype inductif basse puissance sur établi, mesures de rendement, alignement et protections. | 6–8 semaines |
-| **7. Intégration** | Essais progressifs de reconnaissance, atterrissage assisté commandé par la station, présence sur station et séquence de recharge contrôlée. | 4–8 semaines |
-
-Les durées peuvent se chevaucher. Le calendrier dépendra notamment de la
-disponibilité du matériel, du temps de mise au point et de l'accès à un espace
-de test adapté.
-
-## Estimation budgétaire
-
-A voir
-
 
 ## Résultat attendu
 
