@@ -7,7 +7,7 @@ Au-delà du défi technique, l'idée est aussi de tenter de faire quelque chose 
 **plus ou moins utile au quotidien**. 
 
 Le cas d'usage visé est celui d'un
-**drone d'analyse vidéo de sport d'équipe** :
+**drone d'analyse vidéo de sport d'équipe**, inspiré de VEOCAM:
 
 - Le drone **décolle au début du match** et filme la rencontre.
 - Il **suit mes actions tout seul** et se repositionne en permanence **au
