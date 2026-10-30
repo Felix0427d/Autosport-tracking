@@ -51,7 +51,7 @@ capteurs, états, alarmes). Deux modes de contrôle sont possibles :
 
 Le projet sert de fil conducteur pour mettre en pratique plusieurs domaines :
 conception mécanique et impression 3D, systèmes temps réel, microcontrôleurs,
-FPGA, traitement du signal, radiofréquences, vision artificielle, électronique
+traitement du signal, radiofréquences, vision artificielle, électronique
 de puissance, gestion de batterie, sûreté et validation expérimentale.
 
 ### Objectifs fonctionnels
@@ -69,7 +69,6 @@ de puissance, gestion de batterie, sûreté et validation expérimentale.
    AprilTag/ArUco) et estimer la position relative du drone.
 6. Concevoir la station au sol : détection de présence, contrôle d'alignement
    et recharge inductive à puissance limitée.
-7. Utiliser un FPGA pour une fonction matérielle ciblée et mesurable.
 
 ## Architecture générale
 
@@ -89,9 +88,6 @@ L'architecture est divisée en trois sous-systèmes.
   commandes reçues** de la manette ou de la station.
 - **Caméra embarquée** : le flux vidéo est transmis à la station ; aucun
   traitement d'image lourd n'est embarqué.
-- **FPGA** : fonction matérielle dédiée (acquisition parallèle, horodatage
-  matériel, génération de signaux déterministes ou surveillance rapide de
-  défauts). Non nécessaire à la stabilisation du premier prototype.
 - **Radio** : liaison commande/télémétrie distincte du flux vidéo lorsque
   possible, avec mesure du RSSI, du taux de pertes et de la latence.
 
@@ -160,15 +156,6 @@ thermique, et mise en place des protections adaptées.
 - Gestion des états : initialisation, veille, fonctionnement normal, défaut et
   arrêt sécurisé.
 
-### FPGA et logique numérique
-
-- Description matérielle en VHDL ou Verilog.
-- Machines à états finis, compteurs, synchronisation et interfaces.
-- Simulation, contraintes temporelles et validation sur carte.
-- Interface FPGA–STM32 par SPI ou bus parallèle.
-- Démonstrateur conseillé : acquisition multi-voies ou détection matérielle
-  d'un dépassement de seuil.
-
 ### Vision artificielle et reconnaissance de la station
 
 - Réception et synchronisation du flux vidéo au sol.
@@ -224,9 +211,8 @@ thermique, et mise en place des protections adaptées.
 | **3. Liaison radio** | Transport commandes / télémétrie / vidéo, mesures de portée, latence et pertes de paquets, sécurisation des fonctions de commande. | 2–4 semaines |
 | **4. Station intelligente** | Interface cartographique sur PC, encodage des coordonnées, algorithme interne de traduction en commandes, supervision vidéo + état du drone. | 4–8 semaines |
 | **5. Vision** | Réception vidéo au sol, détection de marqueur, estimation de pose et essais sur station fixe avant tout atterrissage autonome. | 4–8 semaines |
-| **6. FPGA** | Démonstrateur indépendant, simulation, intégration avec STM32. | 3–6 semaines |
-| **7. Recharge** | Prototype inductif basse puissance sur établi, mesures de rendement, alignement et protections. | 6–8 semaines |
-| **8. Intégration** | Essais progressifs de reconnaissance, atterrissage assisté commandé par la station, présence sur station et séquence de recharge contrôlée. | 4–8 semaines |
+| **6. Recharge** | Prototype inductif basse puissance sur établi, mesures de rendement, alignement et protections. | 6–8 semaines |
+| **7. Intégration** | Essais progressifs de reconnaissance, atterrissage assisté commandé par la station, présence sur station et séquence de recharge contrôlée. | 4–8 semaines |
 
 Les durées peuvent se chevaucher. Le calendrier dépendra notamment de la
 disponibilité du matériel, du temps de mise au point et de l'accès à un espace
