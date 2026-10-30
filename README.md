@@ -59,7 +59,13 @@ de puissance, gestion de batterie, sûreté et validation expérimentale.
 1. Concevoir en CAO et imprimer en 3D les pièces du drone (châssis, bras,
    supports, protections), puis assembler et mettre au point un drone stable à
    partir d'un contrôleur de vol éprouvé.
-2. Développer une électronique embarquée autour d'un STM32 exécutant FreeRTOS.
+2. Développer une électronique embarquée autour d'un ESP32 exécutant FreeRTOS
+   (microcontrôleur simple et économique, FreeRTOS natif), dédié à la chaîne
+   de recharge inductive : détection de présence, mesures, protections et
+   communication avec la station pendant la charge. Son Wi-Fi/Bluetooth
+   intégré suffit à courte portée (recharge, configuration au sol), mais la
+   liaison de vol au-delà d'une centaine de mètres reposera sur un module
+   radio longue portée dédié (cf. objectif 4).
 3. Développer la **station intelligente** : interface cartographique sur PC,
    planification de mission par coordonnées, algorithme interne de traduction
    en commandes, supervision du flux vidéo et de l'état du drone.
