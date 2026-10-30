@@ -1,18 +1,12 @@
-# AURORA
-
-**Drone autonome avec station intelligente et recharge inductive**
-
-*Autonomous Unmanned Robot with Optimized Recharging Architecture*
-
-> **Budget plafond : 2 500 €** · **Durée indicative : 6 à 12 mois**
->
-> Prototype progressif : vol stabilisé, perception visuelle, intelligence au sol,
-> électronique numérique et recharge inductive expérimentale.
+# Autosport tracking
 
 ## Idées générales
+L'idée du projet avant d'être un projet potentiellement fonctionnel, etst de retravailler tout le bagage technique acquis à l'ECAM Bruxelles pendant mes études d'ingéieur en électronique.
 
 Au-delà du défi technique, l'idée est aussi de tenter de faire quelque chose de
-**plus ou moins utile au quotidien**. Le cas d'usage visé est celui d'un
+**plus ou moins utile au quotidien**. 
+
+Le cas d'usage visé est celui d'un
 **drone d'analyse vidéo de sport d'équipe** :
 
 - Le drone **décolle au début du match** et filme la rencontre.
@@ -23,6 +17,8 @@ Au-delà du défi technique, l'idée est aussi de tenter de faire quelque chose 
   automatiquement.
 - Il **redécolle et filme la deuxième mi-temps**, puis revient se poser en fin
   de match.
+- Un backup existe quand même avec une manette
+
 
 Les vidéos récupérées permettent ensuite une analyse sportive (placement,
 déplacements, phases de jeu), comme le font les solutions professionnelles de
@@ -34,8 +30,8 @@ définir les zones de vol autorisées autour du terrain.
 
 ## Présentation et objectifs
 
-AURORA est un projet personnel multidisciplinaire visant à concevoir un petit drone
-dont les pièces structurelles sont **conçues et imprimées en 3D**, capable de
+Autosport tracking est un projet personnel multidisciplinaire visant à concevoir un petit drone
+dont les pièces structurelles sont conçues et imprimées en 3D, capable de
 rejoindre une station au sol, de la reconnaître par vision, d'effectuer un
 atterrissage assisté, puis de recharger sa batterie au moyen d'un système
 inductif expérimental.
@@ -238,114 +234,9 @@ de test adapté.
 
 ## Estimation budgétaire
 
-Les montants ci-dessous sont des enveloppes de planification, et non des devis.
-Ils comprennent une marge pour les accessoires et les petites pièces. Les prix
-réels dépendront des fournisseurs, des frais de livraison et des choix de
-cartes.
+A voir
 
-### Laboratoire
-
-| Poste | Budget estimé |
-|-------|--------------:|
-| Oscilloscope de laboratoire, idéalement 4 voies | 400 € |
-| Multimètre numérique True RMS | 50 € |
-| Générateur de fonctions | 80 € |
-| Alimentation de laboratoire réglable et limitée en courant | 100 € |
-| Analyseur de spectre RF compact d'entrée de gamme | 180 € |
-| Soudage, consommables, sondes et câblage de base | 100 € |
-| **Imprimante 3D (entrée de gamme) et filament** | **200 €** |
-| **Sous-total laboratoire** | **1 110 €** |
-
-### Projet
-
-| Poste | Budget estimé |
-|-------|--------------:|
-| Moteurs brushless, ESC, hélices et contrôleur de vol (châssis imprimé en 3D) | 380 € |
-| Batteries, chargeur adapté et pièces de rechange | 120 € |
-| STM32, carte de développement FPGA et interfaces | 130 € |
-| Caméra embarquée et transmission vidéo | 90 € |
-| Capteurs complémentaires et marqueurs de station | 70 € |
-| Radio, antennes et télémétrie | 80 € |
-| Prototype inductif : bobines, condensateurs, MOSFET, driver, redressement et régulation | 220 € |
-| Station au sol : structure, mesures et protections | 120 € |
-| Connectique et consommables supplémentaires | 50 € |
-| **Sous-total projet** | **1 260 €** |
-
-### Total
-
-| Poste | Budget estimé |
-|-------|--------------:|
-| **Total estimé** | **2 370 €** |
-| **Réserve pour imprévus** | **130 €** |
-| **Budget global prévu** | **2 500 €** |
-
-### Arbitrages budgétaires
-
-Le budget est serré pour réunir simultanément un laboratoire complet, un drone,
-une station intelligente et un prototype de recharge. Les arbitrages suivants
-sont donc recommandés :
-
-- Acheter un oscilloscope de laboratoire fiable avant d'investir dans des
-  instruments spécialisés plus coûteux.
-- Emprunter à l'université, si possible, l'analyseur RF, les sondes
-  différentielles, les instruments de mesure de puissance **et l'accès à une
-  imprimante 3D** (fablab) — l'achat d'une imprimante d'entrée de gamme reste
-  prévu au budget par défaut.
-- L'impression 3D du châssis supprime l'achat d'un châssis commercial et réduit
-  le coût des pièces de rechange (réimpression à l'identique).
-- Le traitement de vision étant réalisé au sol, aucun calculateur embarqué
-  coûteux n'est nécessaire : une caméra et une transmission vidéo suffisent.
-- Utiliser un contrôleur de vol éprouvé plutôt que développer la boucle de
-  stabilisation depuis zéro.
-- Commencer par un marqueur visuel, puis envisager une reconnaissance plus
-  complexe seulement si le temps et le budget le permettent.
-- Limiter la recharge inductive à une démonstration basse puissance avant
-  d'envisager la recharge effective de la batterie du drone.
-
-## Éléments à ne pas sous-estimer
-
-- **Perte de liaison** : le cerveau étant dans la station, une coupure radio ne
-  doit jamais laisser le drone sans réponse. Un comportement de repli autonome
-  (maintien, retour ou atterrissage sûr) doit être défini et testé.
-- **Résistance mécanique des pièces imprimées** : vibrations, chocs et fatigue
-  peuvent fissurer les pièces 3D. Prévoir une inspection régulière et imprimer
-  des pièces de rechange à l'avance.
-- **Sécurité électrique** : les mesures sur des convertisseurs commutés peuvent
-  être dangereuses. Une pince de masse d'oscilloscope ne doit jamais être
-  raccordée à un nœud flottant ou commuté sans vérifier la topologie et les
-  références de masse. Utiliser une sonde différentielle adaptée lorsque
-  nécessaire.
-- **Batteries** : utiliser un chargeur et un système de gestion compatibles
-  avec la chimie et le nombre de cellules. Ne pas improviser la recharge d'une
-  batterie de vol par le prototype inductif.
-- **Vol** : réaliser les premiers essais sans hélices lorsque cela est
-  pertinent, puis dans une zone de test sécurisée et conformément aux règles
-  applicables en Belgique et dans l'Union européenne.
-- **Radio** : vérifier les bandes, puissances et conditions d'utilisation
-  autorisées avant les essais.
-- **Autonomie** : la reconnaissance de la station et l'algorithme de la station
-  ne doivent pas commander directement les moteurs sans validation, limites de
-  vitesse, procédure d'abandon et mécanismes de sécurité.
 
 ## Résultat attendu
 
-À l'issue du projet, le résultat visé est un démonstrateur documenté dont le
-châssis et les pièces structurelles sont imprimés en 3D, capable de voler sous
-le contrôle d'un autopilote éprouvé, pilotable **à la manette ou par la station
-intelligente** (mission de coordonnées encodée sur carte et traduite par
-l'algorithme interne). La station envoie les commandes, reçoit la vidéo et
-l'état interne du drone, détecte visuellement la zone d'atterrissage et réalise
-une séquence d'approche/atterrissage assisté. Une station de recharge inductive
-expérimentale démontrera le transfert d'énergie à faible puissance, avec
-mesures de rendement et protections.
-
-Le livrable final comprendra les **fichiers CAO et STL des pièces imprimées**,
-les schémas électroniques, le code STM32, les sources FPGA, le logiciel de la
-station intelligente (interface cartographique, algorithme de mission,
-traitement vidéo), les plans de la station, les résultats de mesure, les
-procédures de test et une analyse des limites du prototype.
-
----
-
-*Document de cadrage initial — les choix de composants et le budget devront
-être confirmés avant commande.*
+À l'issue du projet, j'aimerais avoir le drone foncionnel avec toute une documentation dans ce repo.
