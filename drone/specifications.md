@@ -1,6 +1,6 @@
 # Spécifications matérielles du drone
 
-## Configuration retenue : « endurance » (config B)
+## Configuration retenue : « endurance » 
 
 | Paramètre | Valeur cible |
 |-----------|--------------|
@@ -13,7 +13,7 @@
 | Moteurs | 4 × bas KV (~280–380 KV), poussée ~1,2 kg chacun |
 | Batterie | Li-ion 6S haute densité (21700, type Molicel P45B), ~1 100 g, ~230–275 Wh |
 | Contrôleur de vol | Autopilote éprouvé (ArduPilot/Pixhawk ou équivalent) + GPS |
-| Microcontrôleur auxiliaire | ESP32 (FreeRTOS) — chaîne de recharge inductive |
+| Microcontrôleur auxiliaire | ESP32 (FreeRTOS) |
 | Caméras | 4 × (références à définir) |
 | Radio longue portée | Module dédié > 100 m (ELRS ou équivalent) |
 
